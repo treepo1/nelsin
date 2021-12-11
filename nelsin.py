@@ -9,7 +9,7 @@ from discord_minesweeper import *
 
 recomendacoes = []
 
-with open('lista de _filmes.txt','r') as recomendacao:
+with open('lista_de_filmes.txt','r') as recomendacao:
     for linha in recomendacao:
         recomendacoes.append(linha)
 
@@ -159,6 +159,7 @@ async def campo(ctx,comando):
             resposta+='\n\n'
         await ctx.send(resposta)
     elif comando[0:5] == 'click':
+        grid = generate_grid() 
         click(int(comando[6]),int(comando[8]),grid,player_grid)
         resposta = ''
         for i in range(len(grid)):
@@ -183,4 +184,4 @@ async def current_time():
         await channel.send("E que esteja avisado...")
 
 
-bot.run("OTEzMTg1NTEyMTc5NzgxNjkz.YZ60SA.Y8KAB5gvQeSpuyVMU3kfrx9qgAA")
+bot.run("OTEzMTg1NTEyMTc5NzgxNjkz.YZ60SA.ZXMa18iUFFmMMg_sND1-au3NTV8")
